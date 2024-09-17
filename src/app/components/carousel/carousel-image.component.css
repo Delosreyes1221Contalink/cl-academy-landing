@@ -1,0 +1,101 @@
+c-carousel-inner {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-item {
+    flex: 0 0 33.33%;
+    /* Muestra 3 items simultáneamente */
+    display: flex;
+    justify-content: center;
+}
+
+.card-carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-carousel-image:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.card-carousel-image {
+    height: 400px;
+    padding: 25px;
+    border-radius: 100px;
+    width: 250px;
+    margin-left: 4em;
+    box-shadow: 5px 4px 8px 0px #00000040;
+    background: linear-gradient(0deg, rgba(39,97,173,1) 2%, rgba(217,217,217,1) 38%);
+}
+
+@media (max-width: 767px) {
+    .card-carousel-image {
+        margin-left: 1em;
+    }
+}
+
+.font-medium {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40%;
+
+    font-family: Manrope;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34.15px;
+    text-align: center;
+}
+
+.carousel-description {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.39px;
+    text-align: center;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators {
+    display: none !important;
+}
+
+:host ::ng-deep .p-carousel-prev {
+    background: transparent;
+    color: black !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+}
+
+:host ::ng-deep .p-carousel-next {
+    background: transparent;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+:host ::ng-deep .p-carousel-container {
+    background: transparent;
+    padding: 25px;
+}

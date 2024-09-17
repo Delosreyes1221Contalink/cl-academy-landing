@@ -1,0 +1,13 @@
+.navbar-size {
+    height: 5em;
+}
+
+.log-contalink-nabvar {
+    height: 4em;
+    width: 4em;
+    margin-left: 1%;
+}
+
+.navbar-collapse li {
+    margin-left: 30%;
+}
