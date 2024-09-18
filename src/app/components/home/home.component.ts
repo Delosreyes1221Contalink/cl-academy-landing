@@ -80,7 +80,13 @@ export class HomeComponent implements OnInit, OnDestroy
       });
     });
     const elementTitle = this.element.nativeElement.querySelector('.title-text-certificate');
-   
+    const elementSecondTitle = this.element.nativeElement.querySelector('.title-second-text-certificate');
+    const elementImageCertificate = this.element.nativeElement.querySelector('#certificate-image'); 
+    const elementLinkedinImage = this.element.nativeElement.querySelector('.linkedin-logo'); 
+    
     this.observer.observe(elementTitle);
+    this.observer.observe(elementSecondTitle);
+    this.observer.observe(elementImageCertificate);
+    this.observer.observe(elementLinkedinImage);
   }
 }
