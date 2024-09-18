@@ -1,7 +1,68 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
-    <div class="container-fluid row" style="margin: 0%;">
-        <div class="col-1">
-            <a href=""><img class="log-contalink-nabvar" src="assets/images/icon.png" alt="contalink"></a>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/icon.png" alt="contalink" class="log-contalink-nabvar" style="width: 50px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="container-fluid row">
+                <div class="col-lg-3 col-12">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown" (mouseenter)="openDropdownResources()" (mouseleave)="closeDropdownResources()">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"
+                                [ngClass]="{ 'sky-blue-color': isDropdownOpenResources }">
+                                RECURSOS
+                            </a>
+                            <div class="dropdown-menu mt-3" [ngClass]="{ 'show': isDropdownOpenResources }"
+                                aria-labelledby="navbarDropdown">
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown" (mouseenter)="openDropdownProducts()" (mouseleave)="closeDropdownProducts()">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"
+                                [ngClass]="{ 'sky-blue-color': isDropdownOpenProducts }">
+                                PRODUCTO
+                            </a>
+                            <div class="dropdown-menu mt-3" [ngClass]="{ 'show': isDropdownOpenProducts }"
+                                aria-labelledby="navbarDropdown">
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                TESTIMONIOS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offset-lg-4 col-lg-5 col-12">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                PRECIOS
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                INGRESAR
+                            </a>
+                        </li>
+                        <button class="info-button btn">
+                            INFO
+                        </button>
+                        <button class="contratar-button btn ">
+                            CONTRATA AHORA
+                        </button>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

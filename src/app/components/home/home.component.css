@@ -21,6 +21,31 @@
     z-index: -1;
 }
 
+.nav-item .dropdown-menu {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Posición absoluta para desplegar debajo del elemento */
+    background-color: #f8f9fa; /* Color de fondo del dropdown */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd; /* Borde alrededor del dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para el dropdown */
+    z-index: 1000;
+}
+
+.nav-item .dropdown-menu li {
+    padding: 8px 16px; /* Espaciado interno en los elementos del dropdown */
+}
+
+/* Mostrar el dropdown cuando se pasa el cursor sobre el li */
+.nav-item:hover .dropdown-menu {
+    display: block; /* Mostrar el dropdown */
+}
+
+.nav-item .dropdown-menu li:hover {
+    background-color: #e9ecef; /* Cambia el fondo de los elementos del dropdown en hover */
+}
+
 @media (max-width: 767px) {
     .background-movement {
         height: 900px;
