@@ -1,0 +1,38 @@
+<!-- <div
+  class="bg-contalink-primary w-full fixed transition-all duration-1000"
+  ngClass="{{ !open ? '-mt-20 -z-40' : 'mt-20 z-40' }}"
+> -->
+<div>
+  <div
+    class="container mx-auto px-4 py-2 text-contalink-light flex items-center justify-between"
+  >
+    <div>
+      <button class="flex items-center" (click)="closeInvitation()">
+        <div class="w-6 h-6 fill-contalink-white">
+          <!-- <app-close></app-close> -->
+        </div>
+      </button>
+    </div>
+    <div class="overflow-hidden grow relative">
+      <div
+        class="scroll-text flex items-center justify-between gap-8 overflow-visible w-[450px] sm:w-[420px] md:w-[420px] lg:w-[700px] xl:w-full text-center"
+      >
+        <div>¡Conoce Contalink! Entra a nuestro siguiente demo 🚀</div>
+        <div class="hidden xl:block">
+          ¡Conoce Contalink! Entra a nuestro siguiente demo 🚀
+        </div>
+      </div>
+      <div class="absolute top-0 bottom-0 left-0 right-0 overlay"></div>
+    </div>
+    <div class="flex justify-center">
+      <a
+        routerLink="/demo"
+        queryParamsHandling="merge"
+        class="btn btn-success line-clamp-1"
+        (click)="closeInvitation()"
+        >Inscribirme <span class="hidden md:inline-block">al demo</span>
+        <span class="hidden sm:inline-block">📅</span></a
+      >
+    </div>
+  </div>
+</div>

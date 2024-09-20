@@ -11,55 +11,61 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="container-fluid row">
-                <div class="col-lg-3 col-12">
+                <div class="col-lg-3 col-12 justify-content-center d-flex">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown" (mouseenter)="openDropdownResources()" (mouseleave)="closeDropdownResources()">
+                        <li class="nav-item dropdown" (mouseenter)="openDropdownResources()"
+                            (mouseleave)="closeDropdownResources()">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"
                                 [ngClass]="{ 'sky-blue-color': isDropdownOpenResources }">
                                 RECURSOS
                             </a>
-                            <div class="dropdown-menu mt-3" [ngClass]="{ 'show': isDropdownOpenResources }"
-                                aria-labelledby="navbarDropdown">
-
+                            <div class="dropdown-menu dropdown-menu-resources"
+                                [ngClass]="{ 'show': isDropdownOpenResources }" aria-labelledby="navbarDropdown">
+                                <app-resources-submenu></app-resources-submenu>
                             </div>
                         </li>
-                        <li class="nav-item dropdown" (mouseenter)="openDropdownProducts()" (mouseleave)="closeDropdownProducts()">
+                        <li class="nav-item dropdown" (mouseenter)="openDropdownProducts()"
+                            (mouseleave)="closeDropdownProducts()">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"
                                 [ngClass]="{ 'sky-blue-color': isDropdownOpenProducts }">
                                 PRODUCTO
                             </a>
-                            <div class="dropdown-menu mt-3" [ngClass]="{ 'show': isDropdownOpenProducts }"
-                                aria-labelledby="navbarDropdown">
-
+                            <div class="dropdown-menu dropdown-menu-products"
+                                [ngClass]="{ 'show': isDropdownOpenProducts }" aria-labelledby="navbarDropdown">
+                                <app-product-submenu></app-product-submenu>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" target="_blank" href="{{contalinkLandingUrl}}/testimonios">
                                 TESTIMONIOS
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="offset-lg-4 col-lg-5 col-12">
+                <div class="offset-lg-4 col-lg-5 col-12 justify-content-center d-flex buttons-container">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" target="_blank" href="{{contalinkLandingUrl}}/precios">
                                 PRECIOS
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" target="_blank" href="https://app.contalink.com/">
                                 INGRESAR
                             </a>
                         </li>
-                        <button class="info-button btn">
-                            INFO
-                        </button>
-                        <button class="contratar-button btn ">
-                            CONTRATA AHORA
-                        </button>
+                        <li>
+                            <a target="_blank" href="{{contalinkLandingUrl}}/contacto"><button class="info-button btn">
+                                INFO
+                            </button></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://signup.contalink.com"><button class="contratar-button btn ">
+                                CONTRATA AHORA
+                            </button></a>
+                        </li>
                     </ul>
                 </div>
             </div>

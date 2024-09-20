@@ -102,6 +102,9 @@ img {
 }
 
 .like-icon {
+    top: 60%;
+    left: 45%;
+    position: absolute;
     margin-top: 40%;
 }
 

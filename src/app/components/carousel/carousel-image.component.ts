@@ -20,7 +20,7 @@ export class CarouselImageComponent implements OnInit{
   constructor(private carouselImageService: CarouselImageService) { }
   
   ngOnInit(): void {
-    this.carouselImageService.getProductsSmall().then((carouselImage) => {
+    this.carouselImageService.getTestimonialsSmall().then((carouselImage) => {
       this.carouselImages = carouselImage;
     });
 

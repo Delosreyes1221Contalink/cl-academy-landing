@@ -1,0 +1,216 @@
+<div (click)="closeResourcesSubmenu($event)" class="position-relative w-100 h-100">
+  <!-- MOVIL -->
+  <div class="position-relative movil-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 row">
+          <div class="col-6">
+            <div class="col-12 d-flex justify-content-center">
+              <img class="icon-lists" src="assets/icons/MENU_CONOCE.svg">
+              <div class="mt-2 title-list">CONOCE</div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <ul class="no-decoration">
+                <li>
+                  <a href="{{contalinkLandingUrl}}/testimonios" target="_blank" queryParamsHandling="merge" class=""
+                    (click)="hardCloseResourcesSubmenu()">
+                    Testimonios
+                  </a>
+                </li>
+                <li>
+                  <a href="{{contalinkLandingUrl}}/nosotros" target="_blank" queryParamsHandling="merge" class="" (click)="hardCloseResourcesSubmenu()">
+                    Nosotros
+                  </a>
+                </li>
+                <li>
+                  <a href="{{contalinkLandingUrl}}/preguntas" target="_blank" queryParamsHandling="merge" class="" (click)="hardCloseResourcesSubmenu()">
+                    Preguntas frecuentes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="col-12 d-flex justify-content-center">
+              <img class="icon-lists" src="assets/icons/MENU_APRENDE.svg">
+              <div class="mt-2 title-list">APRENDE</div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <ul class="no-decoration">
+                <li>
+                  <a href="{{contalinkLandingUrl}}/demo" target="_blank" queryParamsHandling="merge" (click)="hardCloseResourcesSubmenu()">
+                    Demo en vivo
+                  </a>
+                </li>
+                <li>
+                  <a href="https://tutoriales.contalink.com/es/" target="_blank" (click)="hardCloseResourcesSubmenu()">
+                    Manual de uso
+                  </a>
+                </li>
+                <li>
+                  <a href="{{contalinkLandingUrl}}/blog" target="_blank" queryParamsHandling="merge" (click)="hardCloseResourcesSubmenu()">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 row">
+          <div class="col-6">
+            <div class="col-12 d-flex justify-content-center">
+              <img class="icon-lists" src="assets/icons/MENU_HERRAMIENTAS.svg">
+              <div class="mt-2 title-list">HERRAMIENTAS GRATUITAS</div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <ul class="no-decoration">
+                <li>
+                  <a href="https://www.contalink.com/convertidor-de-estados-de-cuenta-pdf-a-excel" 
+                    target="_blank" queryParamsHandling="merge" class=""
+                    (click)="hardCloseResourcesSubmenu()">
+                    Convertidor de estados de cuenta
+                  </a>
+                </li>
+                <li>
+                  <a href="{{contalinkLiteUrl}}" target="_blank" (click)="hardCloseResourcesSubmenu()">
+                    Contalink Lite
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="col-12 d-flex justify-content-center">
+              <img class="icon-lists" src="assets/icons/MENU_COMUNIDAD.svg">
+              <div class="mt-2 title-list">COMUNIDAD</div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <ul class="no-decoration">
+                <li>
+                  <a href="https://open.spotify.com/show/3EnFbWt5BVkUPCPtr53olb?si=d58f883fc1344391" target="_blank"
+                    rel="noopener noreferrer" (click)="hardCloseResourcesSubmenu()">
+                    Podcast Contamos.pro
+                  </a>
+                </li>
+                <li>
+                  <a href="{{contalinkLandingUrl}}/contacto" target="_blank" queryParamsHandling="merge" (click)="hardCloseResourcesSubmenu()">
+                    Contacto
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC -->
+  <div class="main-container position-relative laptop-list">
+    <div class="row container list-container">
+      <div class="col-lg-6 col-12 container border-middle">
+        <!-- CONOCE -->
+        <div class="row col-12">
+          <div class="col-lg-3 col-12">
+            <img class="icon-lists" src="assets/icons/MENU_CONOCE.svg">
+          </div>
+          <div class="col-lg-9 col-12 container-fluid">
+            <div class="align-items-center d-flex mt-3 mb-3 title-list">CONOCE</div>
+            <ul class="no-decoration">
+              <li>
+                <a href="{{contalinkLandingUrl}}/testimonios" target="_blank" queryParamsHandling="merge" class="" (click)="hardCloseResourcesSubmenu()">
+                  Testimonios
+                </a>
+              </li>
+              <li>
+                <a href="{{contalinkLandingUrl}}/nosotros" target="_blank" queryParamsHandling="merge" class="" (click)="hardCloseResourcesSubmenu()">
+                  Nosotros
+                </a>
+              </li>
+              <li>
+                <a href="{{contalinkLandingUrl}}/preguntas" target="_blank" queryParamsHandling="merge" class="" (click)="hardCloseResourcesSubmenu()">
+                  Preguntas frecuentes
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- APRENDE -->
+        <div class="row col-12">
+          <div class="col-lg-3">
+            <img class="icon-lists" src="assets/icons/MENU_APRENDE.svg">
+          </div>
+          <div class="col-lg-9 container-fluid">
+            <div class="align-items-center d-flex mt-3 mb-3 title-list">APRENDE</div>
+            <ul class="no-decoration">
+              <li>
+                <a href="{{contalinkLandingUrl}}/demo" target="_blank" queryParamsHandling="merge" (click)="hardCloseResourcesSubmenu()">
+                  Demo en vivo
+                </a>
+              </li>
+              <li>
+                <a href="https://tutoriales.contalink.com/es/" target="_blank" (click)="hardCloseResourcesSubmenu()">
+                  Manual de uso
+                </a>
+              </li>
+              <li>
+                <a href="{{contalinkLandingUrl}}/blog" target="_blank" queryParamsHandling="merge" (click)="hardCloseResourcesSubmenu()">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- HERRAMIENTAS GRATUITAS -->
+      <div class="col-lg-6 container">
+        <div class="row col-12">
+          <div class="col-lg-3">
+            <img class="icon-lists" src="assets/icons/MENU_HERRAMIENTAS.svg">
+          </div>
+          <div class="col-lg-9 container-fluid">
+            <div class="align-items-center d-flex mt-3 mb-3 title-list">HERRAMIENTAS GRATUITAS</div>
+            <ul class="no-decoration">
+              <li>
+                <a href="{{contalinkLandingUrl}}/convertidor-de-estados-de-cuenta-pdf-a-excel" 
+                  target="_blank" queryParamsHandling="merge" class=""
+                  (click)="hardCloseResourcesSubmenu()">
+                  Convertidor de estados de cuenta
+                </a>
+              </li>
+              <li>
+                <a href="{{contalinkLiteUrl}}" target="_blank" (click)="hardCloseResourcesSubmenu()">
+                  Contalink Lite
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- COMUNIDAD -->
+        <div class="row col-12">
+          <div class="col-lg-3">
+            <img class="icon-lists" src="assets/icons/MENU_COMUNIDAD.svg">
+          </div>
+          <div class="col-lg-9 container-fluid">
+            <div class="align-items-center d-flex mt-3 mb-3 title-list">COMUNIDAD</div>
+            <ul class="no-decoration">
+              <li>
+                <a href="https://open.spotify.com/show/3EnFbWt5BVkUPCPtr53olb?si=d58f883fc1344391" target="_blank"
+                  rel="noopener noreferrer" (click)="hardCloseResourcesSubmenu()">
+                  Podcast Contamos.pro
+                </a>
+              </li>
+              <li>
+                <a href="{{contalinkLandingUrl}}/contacto" target="_blank" queryParamsHandling="merge" (click)="hardCloseResourcesSubmenu()">
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

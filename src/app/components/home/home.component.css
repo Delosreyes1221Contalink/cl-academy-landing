@@ -925,7 +925,7 @@
     letter-spacing: -0.01em;
     text-align: right;
     color: white;
-    justify-content: end;
+    justify-content: flex-end;
     display: flex;
     filter: brightness(0.6);
 }

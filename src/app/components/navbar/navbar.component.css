@@ -70,17 +70,78 @@
     filter: brightness(1.2);
 }
 
+@media (max-width: 767px) {
+    .info-button {
+        height: 40px;
+        width: 80px;
+        left: 2em;
+        position: relative;
+    }
+
+    .contratar-button {
+        height: 50px;
+        width: 120px;
+        left: 1em;
+        position: relative;
+    }
+
+    .buttons-container {
+        margin-left: .5em;
+    }
+
+    .navbar {
+        background-color: white;
+    }
+
+    #navbarNav {
+        margin-top: -.3em;
+        background-color: white;
+    }
+}
+
 /* animacion del dropwdown */
 
 .dropdown-menu {
-    width: 40em;
-    height: 24em;
+    border: solid 2px;
+    border-color: rgb(17 239 249);
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(-10px);
+    border-radius: 40px;
+}
+
+.dropdown-menu-mobile {
+    border: solid 2px;
+    border-color: rgb(17 239 249);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+    border-radius: 40px;
+}
+
+.dropdown-menu-resources {
+    width: 45em;
+    height: 24em;
+}
+
+.dropdown-menu-products {
+    width: 65em;
+    height: 26em;
 }
 
 .dropdown-menu.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+    .dropdown-menu-resources {
+        width: 20em;
+        height: 24em;
+    }
+
+    .dropdown-menu-products {
+        width: 20em;
+        height: 36em;
+    }
 }

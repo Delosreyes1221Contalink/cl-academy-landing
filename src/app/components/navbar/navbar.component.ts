@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   isDropdownOpenProducts = false;
   isDropdownOpenResources = false;
+  contalinkLandingUrl: string = 'https://www.contalink.com';
 
   openDropdownResources() {
     this.isDropdownOpenResources = true;

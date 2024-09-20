@@ -5,16 +5,15 @@
     [responsiveOptions]="responsiveOptions"
     [autoplayInterval]="5000"
     [circular]="true">
-    <ng-template let-product pTemplate="item">
-      <div class="ml-2 p-3 card-carousel-image">
+    <ng-template let-carousel pTemplate="item">
+      <div class="ml-2 p-3 card-carousel-image position-relative">
         <div class="mb-5 font-medium">
-          {{ product.name }}
+          {{ carousel.name }}
         </div>
         <div class="flex justify-content-between align-items-center
            carousel-description">
           <span>
-            “Los mejores cursos y capacitaciones
-             del mejor sistema, Contalink. ¡Gracias!”
+           {{ carousel.description }}
           </span>
         </div>
         <div class="like-icon row d-flex justify-content-center align-self-end">
