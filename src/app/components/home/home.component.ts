@@ -1,23 +1,70 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HomeService } from './home.service';
+import { Router } from '@angular/router';
+import { CourseService } from 'src/app/services/course.service';
+import { ICourse } from 'src/app/interfaces/course.interface';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit, OnDestroy
-{
-  constructor(private element: ElementRef) { }
+export class HomeComponent implements OnInit, OnDestroy {
+  constructor(
+    private element: ElementRef,
+    private homeService: HomeService,
+    private router: Router,
+    private courseService: CourseService
+  ) { }
+
   private observer: IntersectionObserver | null = null;
+  firstCourseInfo: ICourse | undefined;
+  SecondCourseInfo: ICourse | undefined;
+
+  contactForm: FormGroup = new FormGroup({
+    name: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, [Validators.required]),
+    phone: new FormControl(null, [Validators.required]),
+    emailPromotional: new FormControl(true)
+  })
 
   ngOnInit(): void {
     this.initObserver();
+    this.getCoursesInfo();
   }
 
   ngOnDestroy(): void {
     if (this.observer) {
       this.observer.disconnect();
     }
+  }
+
+  saveForm(): void {
+    this.homeService.createPipedriveDeal(
+      this.contactForm.value
+    );
+  }
+
+  goToCourseForm(courseId: number | undefined): void {
+    this.router.navigate(['/course-form', courseId]);
+  }
+
+  scrollToForm(): void {
+    const formElement = document.getElementById('formRegister');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // PRIVATE METHODS
+  private getCoursesInfo(): void {
+    this.courseService.getPrincipalCourses().subscribe(
+      courses => {
+        this.firstCourseInfo = courses[0];
+        this.SecondCourseInfo = courses[1];
+      }
+    );
   }
 
   private initObserver(): void {
@@ -41,7 +88,7 @@ export class HomeComponent implements OnInit, OnDestroy
     });
     const elementTitle = this.element.nativeElement.querySelector('.title-text-second-container');
     const elementDescription = this.element.nativeElement.querySelector('.description-text-second-container');
-   
+
     this.observer.observe(elementTitle);
     this.observer.observe(elementDescription);
   }
@@ -61,7 +108,7 @@ export class HomeComponent implements OnInit, OnDestroy
     });
     const elementTitle = this.element.nativeElement.querySelector('.cursos-text-title');
     const elementDescription = this.element.nativeElement.querySelector('.cursos-text-description');
-   
+
     this.observer.observe(elementTitle);
     this.observer.observe(elementDescription);
   }
@@ -81,9 +128,9 @@ export class HomeComponent implements OnInit, OnDestroy
     });
     const elementTitle = this.element.nativeElement.querySelector('.title-text-certificate');
     const elementSecondTitle = this.element.nativeElement.querySelector('.title-second-text-certificate');
-    const elementImageCertificate = this.element.nativeElement.querySelector('#certificate-image'); 
-    const elementLinkedinImage = this.element.nativeElement.querySelector('.linkedin-logo'); 
-    
+    const elementImageCertificate = this.element.nativeElement.querySelector('#certificate-image');
+    const elementLinkedinImage = this.element.nativeElement.querySelector('.linkedin-logo');
+
     this.observer.observe(elementTitle);
     this.observer.observe(elementSecondTitle);
     this.observer.observe(elementImageCertificate);

@@ -22,28 +22,37 @@
 }
 
 .nav-item .dropdown-menu {
-    display: none; /* Ocultar por defecto */
-    position: absolute; /* Posición absoluta para desplegar debajo del elemento */
-    background-color: #f8f9fa; /* Color de fondo del dropdown */
-    list-style: none; /* Elimina los puntos de la lista */
+    display: none;
+    /* Ocultar por defecto */
+    position: absolute;
+    /* Posición absoluta para desplegar debajo del elemento */
+    background-color: #f8f9fa;
+    /* Color de fondo del dropdown */
+    list-style: none;
+    /* Elimina los puntos de la lista */
     padding: 0;
     margin: 0;
-    border: 1px solid #ddd; /* Borde alrededor del dropdown */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para el dropdown */
+    border: 1px solid #ddd;
+    /* Borde alrededor del dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Sombra para el dropdown */
     z-index: 1000;
 }
 
 .nav-item .dropdown-menu li {
-    padding: 8px 16px; /* Espaciado interno en los elementos del dropdown */
+    padding: 8px 16px;
+    /* Espaciado interno en los elementos del dropdown */
 }
 
 /* Mostrar el dropdown cuando se pasa el cursor sobre el li */
 .nav-item:hover .dropdown-menu {
-    display: block; /* Mostrar el dropdown */
+    display: block;
+    /* Mostrar el dropdown */
 }
 
 .nav-item .dropdown-menu li:hover {
-    background-color: #e9ecef; /* Cambia el fondo de los elementos del dropdown en hover */
+    background-color: #e9ecef;
+    /* Cambia el fondo de los elementos del dropdown en hover */
 }
 
 @media (max-width: 767px) {
@@ -215,7 +224,7 @@
 @media (max-width: 767px) {
     .welcome-academy-text {
         text-align: center;
-        font-size: 60px;
+        font-size: 65px;
     }
 
     .welcome-academy-text img {
@@ -225,6 +234,26 @@
     #academy-space {
         display: block;
     }
+
+    .cursos-text-description {
+        margin-bottom: 2em;
+    }
+
+    .cards-description {
+        font-size: 35px !important;
+    }
+}
+
+.margin-spacing-300 {
+    margin-top: 300px;
+}
+
+.margin-spacing-150 {
+    margin-top: 150px;
+}
+
+.margin-spacing-200 {
+    margin-top: 200px;
 }
 
 .description-academy-text {
@@ -235,7 +264,7 @@
     font-family: Manrope;
     font-size: 35px;
     font-weight: 400;
-    line-height: 45px;
+    line-height: 35px;
     letter-spacing: -0.01em;
     text-align: left;
 }
@@ -253,16 +282,11 @@
     height: 69.75px;
     position: relative;
     text-align: center;
-    background-color: white;
     border-radius: 40px;
     z-index: 1;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 16px;
     cursor: pointer;
-    z-index: 1;
     transition: color 0.4s ease;
     background: transparent;
 }
@@ -274,7 +298,7 @@
     left: -100%;
     right: 100%;
     bottom: 0;
-    padding: 4px;
+    padding: 3px;
     border-radius: 40px;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -287,7 +311,6 @@
 
 .signup-button:hover::before {
     transform: translateX(-100%);
-    /* Mueve el gradiente al 0% cuando se hace hover */
 }
 
 .signup-brackground-sky-blue::before {
@@ -298,7 +321,7 @@
     background: linear-gradient(89.22deg, #2761ad 4.25%, #050029 99.33%);
 }
 
-.signup-brackground-blue { 
+.signup-brackground-blue {
     margin-top: 1.5em;
 }
 
@@ -466,7 +489,7 @@
 /* Div boton de video */
 .button-video {
     width: 90%;
-    height: 100%;
+    height: 90%;
     position: relative;
     text-align: center;
     background-color: white;
@@ -598,6 +621,7 @@
             #ffffff 29.83%,
             rgba(246, 246, 246, 0) 81.54%);
     box-shadow: 3px 2px 8px 0px #00000040;
+
     background: linear-gradient(105.07deg,
             rgba(255, 255, 255, 0.25) 26.45%,
             rgba(233, 233, 233, 0.1) 83.56%);
@@ -622,6 +646,7 @@
     z-index: 1;
     position: absolute;
 }
+
 /* 
 @media (max-width: 767px) {
     .background-blue {
@@ -676,6 +701,14 @@
     letter-spacing: -0.03em;
 }
 
+.icons-opacity {
+    opacity: .4;
+}
+
+.icons-opacity:hover {
+    opacity: 1;
+}
+
 .time-circle {
     width: 100%;
     height: 30px;
@@ -724,7 +757,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50px;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 .gradient-circle-blue {
@@ -741,7 +774,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50px;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 /* CARD CERTIFICADO */
@@ -801,6 +834,21 @@
     background: linear-gradient(89.22deg, #050029 39.9%, #11eff9 99.33%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.signup-brackground-yellow span a {
+    background: linear-gradient(89.22deg, #ffd241 4.25%, #050029 99.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.signup-brackground-blue span a {
+    background: linear-gradient(89.22deg, #2761ad 4.25%, #050029 99.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .title-second-text-certificate {
@@ -810,6 +858,11 @@
     line-height: 27.32px;
     letter-spacing: -0.01em;
     text-align: left;
+}
+
+#certificate-image {
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -880,17 +933,15 @@
 }
 
 .form-container {
+    overflow: hidden;
     height: 1000px;
     opacity: 0px;
-    /* background: linear-gradient(205deg,
-            rgba(5, 0, 41, 1) 69%,
-            rgba(108, 143, 190, 1) 93%); */
-    background: rgba(5, 0, 41, 1);
-    width: 101%;
-    position: relative;
+    background: rgba(5,0,41,1);
     left: .5em;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    z-index: 1;
+    position: relative;
 }
 
 .gradient-form {
@@ -911,7 +962,7 @@
     font-family: Lexend;
     font-size: 4rem;
     font-weight: 200;
-    line-height: 60px;
+    line-height: 50px;
     letter-spacing: -0.03em;
     text-align: left;
     color: white;
@@ -936,7 +987,7 @@
     margin-right: 10em;
     position: absolute;
     border: solid 1px white;
-    top: 40%;
+    top: 42%;
     left: 50%;
 }
 
@@ -987,6 +1038,10 @@
         justify-content: center;
         display: flex;
     }
+
+    #last-form {
+        display: none;
+    }
 }
 
 
@@ -1016,22 +1071,147 @@
     font-family: Lexend;
     font-size: 20px;
     font-weight: 600;
+    background: #A3F9FC;
 }
 
 .gradient-sky-blue-container {
-    background: rgb(69, 241, 249);
-    background: radial-gradient(circle,
-            rgba(69, 241, 249, 1) 16%,
-            rgba(226, 254, 255, 1) 61%,
-            rgba(255, 255, 255, 0) 70%);
-    border-radius: 50%;
+    background: radial-gradient(circle, rgba(69,241,249,1) 0%, rgba(5,0,41,1) 66%);
     position: absolute;
-    width: 1200px;
-    height: 1200px !important;
-    top: 30vh;
-    left: -20em;
-    opacity: 0px;
-    z-index: 1;
-    opacity: 0.1;
-    filter: brightness(0.6);
+    width: 100% !important;
+    height: 200% !important;
+    z-index: -1 !important;
+    left: -33em;
+    top: 18em;
+    border-radius: 0;
+}
+
+.input-container {
+    position: relative;
+    margin: 0px 0;
+    z-index: 2;
+    height: 70px;
+}
+
+.center-input {
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.label-input {
+    position: absolute;
+    top: 18%;
+    left: 25px;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 0 5px;
+    color: black;
+    font-size: 13px;
+    transition: 0.3s ease all;
+    pointer-events: none;
+    background-color: transparent;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .welcome-academy-text {
+        font-size: 80px;
+    }
+
+    .title-text-second-container {
+        font-size: 45px;
+    }
+
+    .button-video {
+        width: 90%;
+        height: 85%;
+    }
+
+    .description-academy-text {
+        font-size: 30px;
+    }
+
+    .welcome-academy-text img {
+        width: 100px;
+        margin-right: -3%;
+    }
+
+    .signup-button {
+        width: 180px;
+        height: 70px;
+        font-size: 14px;
+    }
+
+    .course-cards {
+        width: 110%;
+        height: 560px;
+    }
+
+    .title-text-certificate {
+        font-size: 50px;
+    }
+
+    .title-second-text-certificate {
+        font-size: 18px;
+    }
+
+    #certificate-image {
+        width: 95%;
+    }
+
+    .title-form-container {
+        font-size: 3.3em;
+    }
+
+    .text-center-form {
+        font-size: 18px;
+    }
+
+    .register {
+        font-size: 2.5em;
+    }
+
+    .contact-information-text {
+        font-size: 18;
+    }
+
+    .text-mex-education {
+        font-size: 11px;
+    }
+
+    .tag_white {
+        width: 80%;
+        height: 80%;
+    }
+
+    .transformed {
+        width: 45px;
+        top: 51%;
+        left: 48%;
+    }
+
+    .cursos-text-title {
+        font-size: 50px;
+    }
+
+    .experiences-title {
+        font-size: 50px;
+    }
+
+    .align-tag-white {
+        position: relative;
+        top: 10px;
+    }
+}
+
+@media (min-width: 1399px) and (max-width: 1700) {
+    .align-tag-white {
+        position: relative;
+        left: -35px;
+    }
+
+    .transformed {
+        top: 44%;
+    }
 }

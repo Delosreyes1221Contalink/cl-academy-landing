@@ -1,0 +1,120 @@
+<div *ngIf="isLoading" class="loading-container">
+    <div class="loading-spinner"></div>
+</div>
+<div class="row principal-container">
+    <div class="container mt-3">
+        <div class="container">
+            <div class="col-12">
+                <h6 class="register-title">Inscríbete al curso</h6>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <form action="" [formGroup]="courseForm">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Nombre*</label>
+                                    <input type="text" class="form-control center-input" required
+                                        formControlName="name">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Correo electrónico*</label>
+                                    <input type="email" class="form-control center-input" formControlName="email">
+                                    <small class="form-text text-white">Enviaremos a este correo tu
+                                        acceso
+                                        para utilizar
+                                        Academia Contalink.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Teléfono*</label>
+                                    <input type="text" class="form-control center-input" minlength="10" maxlength="10"
+                                        pattern="[0-9]+" formControlName="phone">
+                                    <small id="emailHelp" class="form-text text-white">Para contacto vía
+                                        Whatsapp.</small>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Ocupación*</label>
+                                    <input type="text" class="form-control center-input" required
+                                        formControlName="ocupation">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-8">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Curso*</label>
+                                    <input type="text" class="form-control center-input" [readOnly]="true"
+                                        [value]="courseInfo?.courseName" #courseName>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group input-container">
+                                    <div class="form-group input-container">
+                                        <label for="" class="label-input">Horario*</label>
+                                        <input type="text" class="form-control center-input" [readOnly]="true"
+                                            [value]="courseInfo?.schedule" #shcedule>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-6">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Fecha de inicio*</label>
+                                    <input type="text" class="form-control center-input" [readOnly]="true"
+                                        [value]="courseInfo?.initialDate" #initialDate>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group input-container">
+                                    <label for="" class="label-input">Cantidad de sesiones*</label>
+                                    <input type="text" class="form-control center-input" [readOnly]="true"
+                                        [value]="courseInfo?.sessionsNumber" #sessionsNumber>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-12 position-relative" style="left: 1em;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        formControlName="usedContalink">
+                                    <label class="form-check-label text-white">
+                                        ¿Has utlizado contalink?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BOTON ENVIAR -->
+                        <div class="row">
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-info send-button" [disabled]="courseForm.invalid"
+                                    (click)="saveForm()">
+                                    Enviar
+                                    <img src="assets/images/arrow_black.svg" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

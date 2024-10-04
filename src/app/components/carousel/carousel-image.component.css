@@ -16,8 +16,21 @@ c-carousel-inner {
     align-items: center;
 }
 
-.card-carousel-image:hover {
-    filter: brightness(0.8);
+.carousel-gradient {
+    background: rgb(69, 241, 249);
+    background: radial-gradient(circle,
+            #2761AD 16%,
+            rgba(226, 254, 255, 1) 61%);
+    border-radius: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px !important;
+    top: 3vh;
+    left: -20em;
+    opacity: 0px;
+    z-index: 1;
+    opacity: 0.5;
+    filter: brightness(0.6);
 }
 
 img {
@@ -26,46 +39,41 @@ img {
 }
 
 .card-carousel-image {
+    overflow: hidden;
     margin-bottom: 10%;
     height: 400px;
     padding: 25px;
-    border-radius: 100px;
+    border-radius: 70px;
     width: 300px;
-    background: transparent;
     margin-left: 4em;
     box-shadow: 5px 4px 8px 0px #00000040;
-    /* background: linear-gradient(0deg, rgba(39,97,173,1) 2%, rgba(217,217,217,1) 38%); */
-}
-
-@media (max-width: 767px) {
-    .card-carousel-image {
-        margin-left: 1em;
-    }
 }
 
 .font-medium {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 40%;
+    margin-top: 10%;
 
     font-family: Manrope;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 400;
     line-height: 34.15px;
     text-align: center;
 }
 
 .carousel-description {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
 
     font-family: Manrope;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 16.39px;
     text-align: center;
+    top: 80%;
+    left: 33%;
 }
 
 :host ::ng-deep .p-carousel .p-carousel-indicators {
@@ -111,4 +119,86 @@ img {
 .like-icon img {
     width: 50px;
     height: 20px;
+}
+
+.gradient-card-first {
+    top: -19em !important;
+    left: -6em !important;
+}
+
+.gradient-card-second {
+    top: -10em !important;
+    left: -20em !important;
+}
+
+.gradient-card-third {
+    top: 0 !important;
+    left: 0 !important;
+}
+
+
+.gradient-card {
+    background: radial-gradient(circle,
+            rgba(39, 97, 173, 0.4) 20%,
+            rgba(39, 97, 173, 0.2) 40%,
+            rgba(255, 253, 248, 0.1) 60%,
+            rgba(255, 253, 248, 0) 100%
+        );
+    display: flex;
+    position: absolute;
+    width: 180%;
+    border-radius: 100%;
+    height: 192%;
+    opacity: .6;
+}
+
+:host ::ng-deep .p-carousel-next {
+font-size: 10px !important;
+}
+
+:host ::ng-deep .p-carousel-prev {
+    font-size: 10px !important;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 767px) {
+    .card-carousel-image {
+        margin-left: 1em;
+        width: 300px;
+        height: 360px;
+        justify-content: center;
+    }
+
+    :host ::ng-deep .p-carousel-container {
+        background: transparent;
+        padding: 0px;
+    }
+
+    .p-carousel-items-content { 
+        overflow: none !important;
+    }
+
+    :host ::ng-deep .p-carousel-next { 
+        display: none !important;
+    }
+
+    :host ::ng-deep .p-carousel-prev {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .card-carousel-image {
+        width: 250px;
+        height: 340px;
+    }
+
+    .font-medium {
+        font-size: 15px;
+    }
+
+    .carousel-description {
+        font-size: 13px;
+    }
 }
