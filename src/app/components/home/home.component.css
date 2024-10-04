@@ -1061,7 +1061,7 @@
 
 .form-control {
     border-radius: 100px;
-    height: 60px;
+    height: 70px;
 }
 
 .send-button {
@@ -1093,7 +1093,7 @@
 }
 
 .center-input {
-    text-align: center;
+    text-align: start;
     padding: 20px;
     z-index: 2;
 }
