@@ -1,7 +1,21 @@
 .principal-container {
     color: white;
     background: rgba(5, 0, 41, 1);
-    height: 60em;
+    height: 55em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.gradient-sky-blue-container {
+    background: radial-gradient(circle, rgba(69,241,249,1) 0%, rgba(5,0,41,1) 66%);
+    position: absolute;
+    width: 100% !important;
+    height: 200% !important;
+    z-index: -1 !important;
+    left: -33em;
+    top: 18em;
+    border-radius: 0;
 }
 
 input[readonly] {
