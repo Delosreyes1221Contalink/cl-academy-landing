@@ -1114,6 +1114,11 @@
     text-align: center;
 }
 
+.white-img {
+    position: absolute;
+    top: -35%;
+}
+
 @media (min-width: 1200px) and (max-width: 1399px) {
     .welcome-academy-text {
         font-size: 80px;
@@ -1180,15 +1185,11 @@
         font-size: 11px;
     }
 
-    .tag_white {
-        width: 80%;
-        height: 80%;
-    }
-
     .transformed {
         width: 45px;
         top: 51%;
         left: 48%;
+        position: absolute;
     }
 
     .cursos-text-title {
@@ -1198,19 +1199,9 @@
     .experiences-title {
         font-size: 50px;
     }
-
-    .align-tag-white {
-        position: relative;
-        top: 10px;
-    }
 }
 
 @media (min-width: 1399px) and (max-width: 1700) {
-    .align-tag-white {
-        position: relative;
-        left: -35px;
-    }
-
     .transformed {
         top: 44%;
     }
