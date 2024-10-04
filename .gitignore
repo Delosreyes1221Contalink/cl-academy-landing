@@ -1,6 +1,8 @@
 # Dependencias de Node.js
 node_modules/
 
+.angular
+
 # Logs de dependencias
 npm-debug.log*
 yarn-debug.log*

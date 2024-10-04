@@ -12,13 +12,13 @@ import { ImportsModule } from './imports';
   imports: [CarouselModule, ImportsModule],
   providers: [CarouselImageService]
 })
-export class CarouselImageComponent implements OnInit{
+export class CarouselImageComponent implements OnInit {
 
   carouselImages: CarouselImage[] = [];
   responsiveOptions: any[] | undefined;
 
   constructor(private carouselImageService: CarouselImageService) { }
-  
+
   ngOnInit(): void {
     this.carouselImageService.getTestimonialsSmall().then((carouselImage) => {
       this.carouselImages = carouselImage;
@@ -26,20 +26,25 @@ export class CarouselImageComponent implements OnInit{
 
     this.responsiveOptions = [
       {
-          breakpoint: '1199px',
-          numVisible: 1,
-          numScroll: 1
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1
       },
       {
-          breakpoint: '991px',
-          numVisible: 2,
-          numScroll: 1
+        breakpoint: '991px',
+        numVisible: 2,
+        numScroll: 1
       },
       {
-          breakpoint: '767px',
-          numVisible: 1,
-          numScroll: 1
+        breakpoint: '767px',
+        numVisible: 1,
+        numScroll: 1
       }
-  ];
+    ];
+  }
+
+  getCardClass(index: number): string {
+    const classes = ['gradient-card-first', 'gradient-card-second', 'gradient-card-third'];
+    return classes[index % 3];
   }
 } 

@@ -145,3 +145,15 @@
         height: 36em;
     }
 }
+
+@media (max-width: 767px) {
+    .dropdown-menu-resources {
+        width: 20em;
+        height: 24em;
+    }
+
+    .dropdown-menu-products {
+        width: 20em;
+        height: 36em;
+    }
+}

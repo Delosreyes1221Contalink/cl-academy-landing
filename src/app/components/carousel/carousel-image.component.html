@@ -7,13 +7,14 @@
     [circular]="true">
     <ng-template let-carousel pTemplate="item">
       <div class="ml-2 p-3 card-carousel-image position-relative">
+        <div class="gradient-card" [ngClass]="getCardClass(carousel.id)"></div>
         <div class="mb-5 font-medium">
-          {{ carousel.name }}
+          {{ carousel.description }}
         </div>
-        <div class="flex justify-content-between align-items-center
+        <div class="flex justify-content-center align-items-center
            carousel-description">
           <span>
-           {{ carousel.description }}
+           {{ carousel.name }}
           </span>
         </div>
         <div class="like-icon row d-flex justify-content-center align-self-end">
