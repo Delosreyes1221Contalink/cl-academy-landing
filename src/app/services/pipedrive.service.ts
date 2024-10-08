@@ -27,11 +27,12 @@ export class PipedriveService {
         const url: string = `${environment.PIPELINK_API_URL}/deals`;
         const formDealJson = JSON.stringify(deal);
 
-        return this.http.post<any>(
+        let response = this.http.post<any>(
             url,
             formDealJson,
             { params, headers: this.getHeaders() }
-        );;
+        );
+        return response;
     }
 
     // private methods

@@ -6,14 +6,20 @@ import Swal from 'sweetalert2'
 })
 
 export class SweetAlertService {
-    constructor() {
-    }
-    sendCourseInvitation(): void {
+    constructor() {}
+
+    sendCourseInvitation(onClose: () => void): void {
         Swal.fire({
             title: "¡Bienvenido!",
             text: "Enviaremos a tu correo el link a las sesiones virtuales del curso y también tus credenciales de acceso a Academia Contalink.",
-            showConfirmButton: false,
-            timer: 3000
+            showCancelButton: false,
+            showConfirmButton: true,
+            confirmButtonText: 'Cerrar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Llamar a la función onClose proporcionada
+                onClose();
+            }
         });
     }
 }

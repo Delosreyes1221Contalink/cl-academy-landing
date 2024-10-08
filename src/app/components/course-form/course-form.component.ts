@@ -58,15 +58,14 @@ export class CourseFormComponent implements OnInit {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-      // this.courseFormService.createPipedriveDeal(
-      //   this.courseForm.value
-      // );
-      setTimeout(() => {
-        this.sweetAlertService.sendCourseInvitation();
-        setTimeout(() => {
-          this.router.navigate(['/']);
-        }, 4000);
-      }, 1000);
+      this.courseFormService.createPipedriveDeal(
+        this.courseForm.value
+      );
+
+      this.sweetAlertService.sendCourseInvitation(() => {
+        this.router.navigate(['/']);
+      });
+      
     }, 3000);
   }
 

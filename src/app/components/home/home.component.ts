@@ -4,6 +4,7 @@ import { HomeService } from './home.service';
 import { Router } from '@angular/router';
 import { CourseService } from 'src/app/services/course.service';
 import { ICourse } from 'src/app/interfaces/course.interface';
+import { SweetAlertService } from 'src/app/services/sweet-alert.service';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     private element: ElementRef,
     private homeService: HomeService,
     private router: Router,
-    private courseService: CourseService
+    private courseService: CourseService,
+    private sweetAlertService: SweetAlertService
   ) { }
 
   private observer: IntersectionObserver | null = null;
   firstCourseInfo: ICourse | undefined;
   SecondCourseInfo: ICourse | undefined;
+
+  isLoading: boolean = false;
 
   // VARIABLES DEL VIDEOS
   isPlaying: boolean = false;
@@ -65,9 +69,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   saveForm(): void {
-    this.homeService.createPipedriveDeal(
-      this.contactForm.value
-    );
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+      this.homeService.createPipedriveDeal(
+        this.contactForm.value
+      );
+
+      this.sweetAlertService.sendCourseInvitation(() => { });
+    }, 3000);
   }
 
   goToCourseForm(courseId: number | undefined): void {
