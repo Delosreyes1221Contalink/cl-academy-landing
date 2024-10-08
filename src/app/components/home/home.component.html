@@ -45,14 +45,14 @@
         </div>
     </div>
     <!-- <div class="gradient-sky-blue" style="height: 300px;"></div> -->
-    
+
     <div class="container position-relative margin-spacing-300">
         <!-- <div class="gradient-sky-blue-video"></div> -->
         <div class="row">
             <div class="col-xs-12 col-md-12 col-sm-12 col-lg-5 mb-5">
                 <div class="col-12 title-text-second-container">
-                    Acceso 
-                    <span>gratuito</span> 
+                    Acceso
+                    <span>gratuito</span>
                     a todas las funciones de Contalink con empresas simuladas.
                 </div>
                 <br>
@@ -65,12 +65,12 @@
                 d-flex justify-content-center">
                 <div class="button-video" (click)="clickToPlayAndPause()">
                     <video #videoPlayer width="100" height="100" controls (play)="onPlay()" (pause)="onPause()"
-                    [attr.controls]="isPlaying ? true : null">
+                        [attr.controls]="isPlaying ? true : null">
                         <source src="assets/videos/academia_contalink.mp4" type="video/mp4">
                         Tu navegador no soporta el video.
                         <!-- <source src="https://contalink-files.s3.amazonaws.com/assets/videos/academia_contalink.mp4"
                             type="video/mp4"> -->
-                      </video>
+                    </video>
                     <div class="circle-video-button" *ngIf="!isPlaying">
                         <div class="triangle-button"></div>
                     </div>
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="row container cards-title">
-                            <div class="mt-3 d-flex">
+                            <div class="mt-3 d-flex row">
                                 <div class="col-lg-10 offset-2">
                                     <span class="cards-description">
                                         {{firstCourseInfo?.courseName}}
@@ -119,15 +119,16 @@
                                 </div>
                             </div>
                             <div class="initial-date mt-3">
-                                <div class="col-lg-10 offset-2">
+                                <div class="col-lg-10 offset-2 mb-3">
                                     <span>
-                                        Fecha de inicio: 
+                                        Fecha de inicio:
                                         {{formatInitialDate(firstCourseInfo?.initialDate)}}
                                     </span>
                                 </div>
                             </div>
+                            <br><br>
                         </div>
-                        <div class="mt-5 position-relative">
+                        <div class="position-relative margin-cards">
                             <div class="row offset-2">
                                 <div class="col-1 d-flex align-items-center icons-opacity">
                                     <img src="assets/images/icon_zoom.svg" alt="">
@@ -141,6 +142,7 @@
                                 <div class="col-lg-4 col-5 icons-opacity position-absolute icons-calendar">
                                     <div class="time-circle">
                                         <img src="assets/images/icon_calendar.svg" alt="">
+                                        &nbsp;
                                         <span>{{firstCourseInfo?.preiodicity}}</span>
                                     </div>
                                 </div>
@@ -152,8 +154,7 @@
                                  col-lg-2 offset-lg-0
                                  col-md-2 offset-md-4
                                  col-2 offset-3 d-flex justify-content-center 
-                                 align-items-center"
-                                 (click)="goToCourseForm(firstCourseInfo?.id)">
+                                 align-items-center" (click)="goToCourseForm(firstCourseInfo?.id)">
                                 <span>
                                     <a (click)="goToCourseForm(SecondCourseInfo?.id)">
                                         Inscribirme
@@ -171,7 +172,7 @@
                         <div class="d-flex justify-content-end">
                             <div class="mt-5 cards-tag d-flex justify-content-center align-items-center"
                                 style="background-color: #2761AD;">
-                                <span class="container align-items-center" style="color: white;">
+                                <span class="container align-items-center text-white">
                                     CUPO LIMITADO
                                 </span>
                             </div>
@@ -199,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-5 position-relative">
+                        <div class="position-relative margin-cards">
                             <div class="row offset-2">
                                 <div class="col-1 d-flex align-items-center icons-opacity">
                                     <img src="assets/images/icon_zoom.svg" alt="">
@@ -213,18 +214,18 @@
                                 <div class="col-lg-4 col-5 icons-opacity position-absolute icons-calendar">
                                     <div class="time-circle">
                                         <img src="assets/images/icon_calendar.svg" alt="">
+                                        &nbsp;
                                         <span>{{SecondCourseInfo?.preiodicity}}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-end mt-5" style="right: 2em; position: relative;">
+                        <div class="row justify-content-end mt-5 position-relative" style="right: 2em">
                             <div class="signup-button signup-brackground-blue
                                  col-lg-2 offset-lg-0
                                  col-md-2 offset-md-4
                                  col-2 offset-3 d-flex justify-content-center 
-                                 align-items-center"
-                                 (click)="goToCourseForm(SecondCourseInfo?.id)">
+                                 align-items-center" (click)="goToCourseForm(SecondCourseInfo?.id)">
                                 <span>
                                     <a (click)="goToCourseForm(SecondCourseInfo?.id)">
                                         Inscribirme
@@ -239,7 +240,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- ESTE ES EL SEGUNDO CEL CERTIFICADO -->
     <div class="second-gradiante"></div>
     <div class="container margin-spacing-200 position-relative">
@@ -268,7 +269,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container position-relative mt-5">
         <div class="row margin-spacing-200">
             <div class="col-12 d-flex justify-content-center
@@ -282,7 +283,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="form-container position-relative row margin-spacing-200" id="formRegister">
         <!-- <div class="gradient-form"></div> -->
         <div class="row col-12 mt-5 ">
@@ -313,27 +314,27 @@
                         </div>
                         <div class="col-12 col-lg-10 form-group input-container">
                             <label for="" class="label-input">Nombre*</label>
-                            <input type="text" class="form-control center-input" required
-                                formControlName="name">
+                            <input type="text" class="form-control center-input" required formControlName="name">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-7 col-lg-6 form-group input-container">
                             <label for="" class="label-input">Correo*</label>
-                            <input type="email" class="form-control center-input"
-                            id="email" formControlName="email" name="email">
+                            <input type="email" class="form-control center-input" id="email" formControlName="email"
+                                name="email">
                         </div>
                         <div class="col-lg-4 col-5 form-group input-container">
                             <label for="" class="label-input">Celular*</label>
-                            <input type="number" class="form-control center-input"
-                            id="phone" formControlName="phone" name="phone">
+                            <input type="number" class="form-control center-input" id="phone" formControlName="phone"
+                                name="phone">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-12 form-check">
-                            <input type="checkbox" style="left: 1em;" class="form-check-input position-relative" id="" checked formControlName="emailPromotional">
+                            <input type="checkbox" style="left: 1em;" class="form-check-input position-relative" id=""
+                                checked formControlName="emailPromotional">
                             <label class="form-check-label text-white" style="font-size: 13px;">
                                 &nbsp; &nbsp; Acepto recibir correos electrónicos de comunicados y promociones.
                             </label>
@@ -341,10 +342,9 @@
                     </div>
                     <div class="row conatiner col-12 mt-3">
                         <div class="col-12 col-lg-5 send-button-container">
-                            <button type="button" class="btn send-button"
-                                [disabled]="contactForm.invalid"
+                            <button type="button" class="btn send-button" [disabled]="contactForm.invalid"
                                 (click)="saveForm()">
-                                Enviar 
+                                Enviar
                                 <img src="assets/images/arrow_black.svg" style="width: 20px;">
                             </button>
                         </div>
@@ -352,7 +352,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-12 mt-5 mb-5" id="last-form">
-                <div class="row col-12 position-relative" >
+                <div class="row col-12 position-relative">
                     <!-- <hr class="transformed"> -->
                     <div class="col-7" style="border-right: solid 1px white;">
                         <div class="col-10">
