@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   scrollToForm(): void {
-    const formElement = document.getElementById('formRegister');
+    const formElement = document.getElementById('course-cards');
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth' });
     }
