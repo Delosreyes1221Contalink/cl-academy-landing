@@ -107,26 +107,24 @@
                             <div class="mt-3 d-flex row">
                                 <div class="col-lg-10 offset-2">
                                     <span class="cards-description">
-                                        {{firstCourseInfo?.courseName}}
+                                        {{SecondCourseInfo?.courseName}}
                                     </span><br>
                                 </div>
                             </div>
                             <div class="card-sesions">
                                 <div class="col-lg-10 offset-2">
                                     <span class="cards-notes">
-                                        {{firstCourseInfo?.sessionsNumber}} sesiones
+                                        {{SecondCourseInfo?.sessionsNumber}} sesiones
                                     </span><br>
                                 </div>
-                            </div>
-                            <div class="initial-date mt-3">
                                 <div class="col-lg-10 offset-2 mb-3">
-                                    <span>
-                                        Fecha de inicio:
-                                        {{formatInitialDate(firstCourseInfo?.initialDate)}}
+                                    <span class="cards-notes">
+                                        Inicio:
+                                        {{formatInitialDate(SecondCourseInfo?.initialDate)}}
                                     </span>
                                 </div>
                             </div>
-                            <br><br>
+                            <br>
                         </div>
                         <div class="position-relative margin-cards">
                             <div class="row offset-2">
@@ -136,14 +134,14 @@
                                 <div class="col-lg-3 col-4 icons-opacity">
                                     <div class="time-circle">
                                         <img src="assets/images/icon_clock.svg" alt="">
-                                        <span>{{firstCourseInfo?.duration}}</span>
+                                        <span>{{SecondCourseInfo?.duration}}</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-5 icons-opacity position-absolute icons-calendar">
                                     <div class="time-circle">
                                         <img src="assets/images/icon_calendar.svg" alt="">
                                         &nbsp;
-                                        <span>{{firstCourseInfo?.preiodicity}}</span>
+                                        <span>{{SecondCourseInfo?.preiodicity}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +152,7 @@
                                  col-lg-2 offset-lg-0
                                  col-md-2 offset-md-4
                                  col-2 offset-3 d-flex justify-content-center 
-                                 align-items-center" (click)="goToCourseForm(firstCourseInfo?.id)">
+                                 align-items-center" (click)="goToCourseForm(SecondCourseInfo?.id)">
                                 <span>
                                     <a (click)="goToCourseForm(SecondCourseInfo?.id)">
                                         Inscribirme
@@ -181,21 +179,20 @@
                             <div class="mt-3 d-flex">
                                 <div class="col-lg-10 offset-2">
                                     <span class="cards-description">
-                                        {{SecondCourseInfo?.courseName}}
+                                        {{firstCourseInfo?.courseName}}
                                     </span><br>
                                 </div>
                             </div>
                             <div class="card-sesions">
                                 <div class="col-lg-10 offset-2">
                                     <span class="cards-notes">
-                                        {{SecondCourseInfo?.sessionsNumber}} sesiones
+                                        {{firstCourseInfo?.sessionsNumber}} sesiones
                                     </span><br>
                                 </div>
-                            </div>
-                            <div class="initial-date mt-3">
-                                <div class="col-lg-10 offset-2">
-                                    <span>
-                                        Fecha de inicio: {{formatInitialDate(SecondCourseInfo?.initialDate)}}
+                                <div class="col-lg-10 offset-2 mb-3">
+                                    <span class="cards-notes">
+                                        Inicio:
+                                        {{formatInitialDate(firstCourseInfo?.initialDate)}}
                                     </span>
                                 </div>
                             </div>
@@ -208,14 +205,14 @@
                                 <div class="col-lg-3 col-4 icons-opacity">
                                     <div class="time-circle">
                                         <img src="assets/images/icon_clock.svg" alt="">
-                                        <span>{{SecondCourseInfo?.duration}}</span>
+                                        <span>{{firstCourseInfo?.duration}}</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-5 icons-opacity position-absolute icons-calendar">
                                     <div class="time-circle">
                                         <img src="assets/images/icon_calendar.svg" alt="">
                                         &nbsp;
-                                        <span>{{SecondCourseInfo?.preiodicity}}</span>
+                                        <span>{{firstCourseInfo?.preiodicity}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -225,9 +222,9 @@
                                  col-lg-2 offset-lg-0
                                  col-md-2 offset-md-4
                                  col-2 offset-3 d-flex justify-content-center 
-                                 align-items-center" (click)="goToCourseForm(SecondCourseInfo?.id)">
+                                 align-items-center" (click)="goToCourseForm(firstCourseInfo?.id)">
                                 <span>
-                                    <a (click)="goToCourseForm(SecondCourseInfo?.id)">
+                                    <a (click)="goToCourseForm(firstCourseInfo?.id)">
                                         Inscribirme
                                     </a>
                                     &nbsp;
