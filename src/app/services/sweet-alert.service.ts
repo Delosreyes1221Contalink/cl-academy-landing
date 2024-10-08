@@ -22,4 +22,19 @@ export class SweetAlertService {
             }
         });
     }
+
+    sendCourseInvitationPrincipalForm(onClose: () => void): void {
+        Swal.fire({
+            title: "¡Bienvenido!",
+            text: "Gracias por registrar tu información. Pronto nos comunicaremos contigo, para brindarte más detalles sobre el programa con instituciones educativas.",
+            showCancelButton: false,
+            showConfirmButton: true,
+            confirmButtonText: 'Cerrar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Llamar a la función onClose proporcionada
+                onClose();
+            }
+        });
+    }
 }

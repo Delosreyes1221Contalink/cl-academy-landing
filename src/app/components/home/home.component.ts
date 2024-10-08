@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.contactForm.value
       );
 
-      this.sweetAlertService.sendCourseInvitation(() => { });
+      this.sweetAlertService.sendCourseInvitationPrincipalForm(() => { });
     }, 3000);
   }
 
