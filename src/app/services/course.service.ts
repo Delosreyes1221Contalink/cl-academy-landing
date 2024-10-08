@@ -10,15 +10,15 @@ import { BehaviorSubject, Observable, catchError, lastValueFrom, map, throwError
 
 export class CourseService {
     coursesList: ICourse[] = [];
-
     private coursesSubject: BehaviorSubject<ICourse[]> = new BehaviorSubject<ICourse[]>([]);
+    
     coursesList$ = this.coursesSubject.asObservable();
 
     constructor(private http: HttpClient) {
         this.getAllCourses();
     }
 
-    async getAllCourses() {
+    async getAllCourses(): Promise<void> {
         const url: string = `${environment.LAMBDA_BACKEND_URL}/get_courses`;
         const token: string = '"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaXNfYWRtaW4iOm51bGwsInVuaXZlcnNpdHlfaWQiOjEsImNyYXRlZF9hdCI6IjIwMjQtMDktMDZUMjA6NTU6NDQuNDM0NzE2In0.LAEMOvafSdGYaXFXL9Gc5RMMeaCPT1OFoje6rE9saSg"';
 

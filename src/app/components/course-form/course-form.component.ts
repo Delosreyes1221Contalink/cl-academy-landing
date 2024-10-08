@@ -86,7 +86,8 @@ export class CourseFormComponent implements OnInit {
   }
 
   // private methods
-  private fillFormInputs(): void {
+  private async fillFormInputs(): Promise<void> {
+    await this.courseService.getAllCourses();
     this.courseService.getCourseById(this.courseId).subscribe(
       courses => {
         this.courseInfo = courses
