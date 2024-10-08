@@ -74,7 +74,6 @@ export class CourseFormComponent implements OnInit {
   private fillFormInputs(): void {
     this.courseService.getCourseById(this.courseId).subscribe(
       courses => {
-        console.log('este es', courses);
         this.courseInfo = courses
       }
     );

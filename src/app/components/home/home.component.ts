@@ -22,6 +22,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   firstCourseInfo: ICourse | undefined;
   SecondCourseInfo: ICourse | undefined;
 
+  // VARIABLES DEL VIDEOS
+  isPlaying: boolean = false;
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+
   contactForm: FormGroup = new FormGroup({
     name: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required]),
@@ -38,6 +42,26 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (this.observer) {
       this.observer.disconnect();
     }
+  }
+
+  onPlay() {
+    this.isPlaying = true;
+    this.videoPlayer.nativeElement.play();
+  }
+
+  onPause() {
+    this.isPlaying = false;
+    this.toggleControls();
+  }
+
+  toggleControls() {
+    this.videoPlayer.nativeElement.controls = this.isPlaying;
+  }
+
+  clickToPlayAndPause(): void {
+    console.log('si llega aqui');
+    if (!this.isPlaying) this.onPlay();
+    else  this.onPause();
   }
 
   saveForm(): void {
