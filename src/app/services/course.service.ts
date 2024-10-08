@@ -9,39 +9,6 @@ import { BehaviorSubject, Observable, catchError, lastValueFrom, map, throwError
 })
 
 export class CourseService {
-    coursesArray: ICourse[] = [
-        {
-            id: 1,
-            courseName: 'Procesos contables automatizados.',
-            sessionsNumber: 4,
-            duration: '1 hr',
-            preiodicity: 'Semanal',
-            active: true,
-            initialDate: '03/10/24',
-            schedule: '13:00'
-        },
-        {
-            id: 2,
-            courseName: 'Contabilidad simplificada para PF o Resico.',
-            sessionsNumber: 2,
-            duration: '1 hr',
-            preiodicity: 'Semanal',
-            active: true,
-            initialDate: '03/10/2024',
-            schedule: '13:00'
-        },
-        {
-            id: 2,
-            courseName: 'Contabilidad simplificada para PF o Resico.',
-            sessionsNumber: 2,
-            duration: '1 hr',
-            preiodicity: 'Semanal',
-            active: false,
-            initialDate: '03/10/2024',
-            schedule: '13:00'
-        }
-    ];
-
     coursesList: ICourse[] = [];
 
     private coursesSubject: BehaviorSubject<ICourse[]> = new BehaviorSubject<ICourse[]>([]);

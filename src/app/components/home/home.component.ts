@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   clickToPlayAndPause(): void {
     console.log('si llega aqui');
     if (!this.isPlaying) this.onPlay();
-    else  this.onPause();
+    else this.onPause();
   }
 
   saveForm(): void {
@@ -159,5 +159,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.observer.observe(elementSecondTitle);
     this.observer.observe(elementImageCertificate);
     this.observer.observe(elementLinkedinImage);
+  }
+
+  formatInitialDate(initialDate: string | undefined): string | undefined {
+    let date;
+    if (initialDate != undefined) date = new Date(initialDate.replace(' ', 'T'));
+
+    if (date != undefined) {
+      date = date.toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+
+    return date;
   }
 }

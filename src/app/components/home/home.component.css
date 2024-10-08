@@ -1138,6 +1138,11 @@ video {
     text-align: center;
 }
 
+.initial-date {
+    font-size: 15px;
+    font-family: Lexend;
+}
+
 .white-img {
     position: absolute;
     top: -35%;

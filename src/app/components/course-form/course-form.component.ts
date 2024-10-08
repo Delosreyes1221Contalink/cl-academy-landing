@@ -70,6 +70,21 @@ export class CourseFormComponent implements OnInit {
     }, 3000);
   }
 
+  formatInitialDate(initialDate: string | undefined): string | undefined {
+    let date;
+    if (initialDate != undefined) date = new Date(initialDate.replace(' ', 'T'));
+
+    if (date != undefined) {
+      date = date.toLocaleDateString('es-ES', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    }
+
+    return date;
+  }
+
   // private methods
   private fillFormInputs(): void {
     this.courseService.getCourseById(this.courseId).subscribe(

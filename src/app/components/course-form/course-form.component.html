@@ -75,7 +75,7 @@
                                 <div class="form-group input-container">
                                     <label for="" class="label-input">Fecha de inicio*</label>
                                     <input type="text" class="form-control center-input" [readOnly]="true"
-                                        [value]="courseInfo?.initialDate" #initialDate>
+                                        [value]="formatInitialDate(courseInfo?.initialDate)" #initialDate>
                                 </div>
                             </div>
                             <div class="col-6">

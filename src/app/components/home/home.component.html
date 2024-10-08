@@ -118,6 +118,14 @@
                                     </span><br>
                                 </div>
                             </div>
+                            <div class="initial-date mt-3">
+                                <div class="col-lg-10 offset-2">
+                                    <span>
+                                        Fecha de inicio: 
+                                        {{formatInitialDate(firstCourseInfo?.initialDate)}}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="mt-5 position-relative">
                             <div class="row offset-2">
@@ -181,6 +189,13 @@
                                     <span class="cards-notes">
                                         {{SecondCourseInfo?.sessionsNumber}} sesiones
                                     </span><br>
+                                </div>
+                            </div>
+                            <div class="initial-date mt-3">
+                                <div class="col-lg-10 offset-2">
+                                    <span>
+                                        Fecha de inicio: {{formatInitialDate(SecondCourseInfo?.initialDate)}}
+                                    </span>
                                 </div>
                             </div>
                         </div>
